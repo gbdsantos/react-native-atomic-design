@@ -1,11 +1,8 @@
 import React from 'react';
+import { ImageProps, View } from 'react-native';
 
-import {
-  Image,
-  ImageProps,
-  Text,
-  View
-} from 'react-native';
+import { PostLiked } from '../../atoms/PostLiked';
+import { PostLikedAvatar } from '../../atoms/PostLikedAvatar';
 
 import { styles } from '../../../pages/Feed/styles';
 
@@ -17,8 +14,8 @@ type Props = {
 export function PostAbout({ avatar, likes } :Props){
   return (
     <View style={styles.postAbout}>
-    <Image source={avatar} style={styles.lastLiked} />
-    <Text style={styles.likes}>{likes}</Text>
+    <PostLikedAvatar source={avatar} />
+    <PostLiked value={likes} />
   </View>
   );
 }
