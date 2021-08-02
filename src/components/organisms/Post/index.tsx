@@ -1,11 +1,5 @@
 import React from 'react';
-
-import {
-  Image,
-  ImageProps,
-  Text,
-  View
-} from 'react-native';
+import { ImageProps, View } from 'react-native';
 
 import { PostPhoto } from '../../atoms/PostPhoto';
 import { PostHeader } from '../../molecules/PostHeader';
