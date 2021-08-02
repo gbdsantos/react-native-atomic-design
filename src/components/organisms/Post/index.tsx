@@ -7,6 +7,7 @@ import {
   View
 } from 'react-native';
 
+import { PostPhoto } from '../../atoms/PostPhoto';
 import { PostHeader } from '../../molecules/PostHeader';
 
 import {
@@ -46,7 +47,7 @@ export function Post({ data }: Props){
           location={data.location}
         />
         
-        <Image source={data.cover} style={styles.cover} />
+        <PostPhoto source={data.cover} />
         
         <View style={styles.postFooter}>
           <View style={styles.postOptions}>
