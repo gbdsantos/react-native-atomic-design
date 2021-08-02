@@ -7,15 +7,13 @@ import {
   View
 } from 'react-native';
 
+import { PostHeader } from '../../molecules/PostHeader';
+
 import {
   MessengerIcon,
   FavoriteIcon,
   CommentIcon,
-  CameraIcon,
-  LogoIcon,
-  IgtvIcon,
   SaveIcon,
-  ProfileIcon
 } from '../../../global/styles/icons';
 
 import { styles } from '../../../pages/Feed/styles';
@@ -43,16 +41,13 @@ type Props = {
 export function Post({ data }: Props){
   return (
     <View style={styles.post}>
-        <View style={styles.postHeader}>
-          <Image source={ProfileIcon} style={styles.postAvatar} />
-          <View>
-            <Text style={styles.postUsername}>{data.username}</Text>
-            <Text style={styles.postLocation}>{data.location}</Text>
-          </View>
-        </View>
-
+        <PostHeader 
+          username={data.username}
+          location={data.location}
+        />
+        
         <Image source={data.cover} style={styles.cover} />
-
+        
         <View style={styles.postFooter}>
           <View style={styles.postOptions}>
             <View style={styles.postOptionsSide}>
