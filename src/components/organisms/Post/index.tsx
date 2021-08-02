@@ -7,7 +7,7 @@ import { PostOptions } from '../../molecules/PostOptions';
 import { PostAbout } from '../../molecules/PostAbout';
 import { PostDescription } from '../../atoms/PostDescription';
 
-import { styles } from '../../../pages/Feed/styles';
+import { styles } from './styles';
 
 type Profile = {
   id: string;

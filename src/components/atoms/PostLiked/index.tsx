@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TextProps } from 'react-native';
 
-import { styles } from '../../../pages/Feed/styles';
+import { styles } from './styles';
 
 type Props = TextProps & {
   value: string;
