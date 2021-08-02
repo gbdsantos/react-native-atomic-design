@@ -11,6 +11,7 @@ import { PostPhoto } from '../../atoms/PostPhoto';
 import { PostHeader } from '../../molecules/PostHeader';
 import { PostOptions } from '../../molecules/PostOptions';
 import { PostAbout } from '../../molecules/PostAbout';
+import { PostDescription } from '../../atoms/PostDescription';
 
 import { styles } from '../../../pages/Feed/styles';
 
@@ -50,8 +51,8 @@ export function Post({ data }: Props){
             avatar={data.lastLiked.avatar}
             likes={data.likes}
           />
-          
-          <Text style={styles.description}>{data.description}</Text>
+
+          <PostDescription value={data.description}/> 
         </View>
     </View>
   );
